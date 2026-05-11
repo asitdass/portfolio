@@ -31,7 +31,7 @@ export function Contact() {
     setStatus("submitting");
     setErrorMessage("");
 
-    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY?.trim();
 
     // Fallback: if no key configured, open mail client
     if (!accessKey) {
