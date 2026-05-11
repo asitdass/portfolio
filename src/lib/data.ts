@@ -208,6 +208,24 @@ export const projects = [
     ],
   },
   {
+    title: "YourPhotoCrew",
+    subtitle: "Photography Booking Platform",
+    year: "2025",
+    tag: "Freelance · Client Work",
+    description:
+      "High-performance, SEO-optimized landing webapp for a Bengaluru-based photography service. Built with image-heavy galleries, integrated booking flows (Paytm Insider, BookMyShow), and a buttery-smooth mobile experience.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "SEO", "Vercel"],
+    liveUrl: "https://www.yourphotocrew.com/",
+    liveLabel: "Live Site",
+    confidential: false,
+    featured: false,
+    highlights: [
+      "100/100 Lighthouse score on performance, SEO, and accessibility",
+      "Integrated bookings via Paytm Insider & BookMyShow",
+      "Optimized image-heavy galleries with lazy-loading & responsive srcSets",
+    ],
+  },
+  {
     title: "Communities",
     subtitle: "Org-Level Discussion Platform",
     year: "2024",

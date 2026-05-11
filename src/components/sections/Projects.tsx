@@ -8,6 +8,7 @@ import { GithubIcon } from "@/components/ui/Icons";
 
 const projectGradients = [
   "from-[#dfff1f] via-[#a3e635] to-[#65a30d]",
+  "from-[#f472b6] via-[#fb923c] to-[#facc15]",
   "from-[#3b82f6] via-[#6366f1] to-[#8b5cf6]",
   "from-[#f97316] via-[#ef4444] to-[#ec4899]",
 ];
@@ -41,7 +42,7 @@ export function Projects() {
         </div>
 
         {/* Project grid */}
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 gap-5">
           {projects.map((project, i) => {
             const isLive = !project.confidential && project.liveUrl;
             const Tag = isLive ? "a" : "div";
@@ -124,7 +125,7 @@ export function Projects() {
 
                     {/* Tech */}
                     <div className="mt-4 flex flex-wrap gap-1.5">
-                      {project.tech.slice(0, 4).map((t) => (
+                      {project.tech.slice(0, 6).map((t) => (
                         <span
                           key={t}
                           className="text-[10px] uppercase tracking-wider text-muted bg-bg-elevated border border-border px-2 py-1 rounded-full font-mono"
@@ -132,9 +133,9 @@ export function Projects() {
                           {t}
                         </span>
                       ))}
-                      {project.tech.length > 4 && (
+                      {project.tech.length > 6 && (
                         <span className="text-[10px] uppercase tracking-wider text-muted bg-bg-elevated border border-border px-2 py-1 rounded-full font-mono">
-                          +{project.tech.length - 4}
+                          +{project.tech.length - 6}
                         </span>
                       )}
                     </div>
