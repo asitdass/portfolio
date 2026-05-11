@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import { stats, marqueeRow1, marqueeRow2 } from "@/lib/data";
 
@@ -23,10 +24,17 @@ export function Hero() {
           transition={{ delay: 2.4, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="relative mb-6">
-            <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-br from-accent via-accent-bright to-accent-dark flex items-center justify-center text-black font-bold text-2xl sm:text-3xl shadow-[0_0_60px_rgba(223,255,31,0.35)]">
-              ARD
+            <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-accent/40 ring-offset-4 ring-offset-bg shadow-[0_0_60px_rgba(223,255,31,0.35)]">
+              <Image
+                src="/my-image.png"
+                alt="Asit Rohan Dass"
+                fill
+                priority
+                sizes="(min-width: 640px) 112px, 96px"
+                className="object-cover"
+              />
             </div>
-            <span className="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-emerald-500 border-[3px] border-bg flex items-center justify-center">
+            <span className="absolute -top-0.5 -right-0.5 w-5 h-5 rounded-full bg-emerald-500 border-[3px] border-bg flex items-center justify-center z-10">
               <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
             </span>
           </div>

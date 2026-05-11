@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { navItems, siteConfig } from "@/lib/data";
 import { useActiveSection } from "@/hooks/useActiveSection";
@@ -39,10 +40,16 @@ export function Navbar() {
           {/* Brand */}
           <a
             href="#home"
-            className="flex items-center gap-2 px-3 py-1.5 group"
+            className="flex items-center gap-2 pl-1 pr-3 py-1 group"
           >
-            <span className="relative w-8 h-8 rounded-full bg-accent flex items-center justify-center text-black font-bold text-sm">
-              A
+            <span className="relative w-8 h-8 rounded-full overflow-hidden ring-1 ring-accent/40 shrink-0">
+              <Image
+                src="/my-image.png"
+                alt="Asit Rohan Dass"
+                fill
+                sizes="32px"
+                className="object-cover"
+              />
             </span>
             <span className="hidden sm:inline text-sm font-medium text-fg">
               {siteConfig.name.split(" ")[0]} Dass
